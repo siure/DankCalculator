@@ -123,6 +123,7 @@ const rejectTests = [
     { expr: "import('fs')", description: "Rejects import()" },
     { expr: "fetch('http://evil.com')", description: "Rejects fetch()" },
     { expr: "sin(1); alert(1)", description: "Rejects semicolon injection" },
+    { expr: "1 con structor", description: "Rejects spaced identifier fragments" },
 ];
 
 let passed = 0;

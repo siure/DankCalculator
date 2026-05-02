@@ -14,6 +14,8 @@ const tests = [
     { expr: "999999999999999999 + 1", expected: "1000000000000000000", description: "Large integer addition (BigInt)" },
     { expr: "123456789012345678 * 2", expected: "246913578024691356", description: "Large integer multiplication (BigInt)" },
     { expr: "999999999999999999 - 999999999999999998", expected: "1", description: "Large integer subtraction" },
+    { expr: "30 000 + 3", expected: "30003", description: "Grouped number with spaces" },
+    { expr: "1 234 567 * 2", expected: "2469134", description: "Multiple grouped number spaces" },
 
     { expr: "2 + 2", expected: "4", description: "Simple addition" },
     { expr: "10 - 3", expected: "7", description: "Simple subtraction" },
