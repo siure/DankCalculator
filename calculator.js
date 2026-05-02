@@ -29,8 +29,8 @@ function containsMathFunctions(expression) {
     return _getMathNamesRegex().test(expression);
 }
 
-function normalizeGroupedNumberSpaces(expression) {
-    return expression.replace(/(\d)\s+(?=\d)/g, '$1');
+function normalizeGroupedNumberSeparators(expression) {
+    return expression.replace(/(\d)(?:\s+|_)(?=\d)/g, '$1');
 }
 
 function _findMatchingParen(expr, openPos) {
@@ -249,7 +249,7 @@ function evaluate(expression) {
         };
     }
 
-    let cleaned = normalizeGroupedNumberSpaces(expression.trim());
+    let cleaned = normalizeGroupedNumberSeparators(expression.trim());
 
     if (cleaned.length === 0) {
         return {
